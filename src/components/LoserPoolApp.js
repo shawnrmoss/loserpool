@@ -36,7 +36,7 @@ class LoserPoolApp extends React.Component {
     return (
       <div>
         <AppBar
-          title="Title"
+          title="Shawns"          
           iconElementLeft={<IconButton onClick={this.handleToggle}><NavigationMenu /></IconButton>}
           iconElementRight={
             <IconMenu
@@ -59,10 +59,17 @@ class LoserPoolApp extends React.Component {
           open={this.state.open}
           onRequestChange={open => this.setState({open})}
         >
-          <MenuItem to="/about" >Abouts</MenuItem>
-          <MenuItem >Inbox</MenuItem>
+          <MenuItem primaryText="Refresh" />
+          <MenuItem primaryText="Help" />
+          <MenuItem primaryText="Sign out" />
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </LeftNav>
-        {this.props.children}
+        <section className="container" >
+          {this.props.children}
+        </section>
+
       </div>
     );
   }
