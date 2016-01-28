@@ -24,7 +24,6 @@ class LoserPoolApp extends React.Component {
   constructor(props) {
         super(props);
         this.state = {open: false};
-
         this.handleToggle = this.handleToggle.bind(this);
   }
 
@@ -36,7 +35,7 @@ class LoserPoolApp extends React.Component {
     return (
       <div>
         <AppBar
-          title="Shawns"          
+          title="Shawns"
           iconElementLeft={<IconButton onClick={this.handleToggle}><NavigationMenu /></IconButton>}
           iconElementRight={
             <IconMenu
